@@ -1,0 +1,21 @@
+services:
+  coe2:
+    image: itzg/minecraft-server:2024.10.0
+    tty: true
+    stdin_open: true
+
+    ports:
+      - "25565:25565"
+
+    environment:
+      EULA: "TRUE"
+      TYPE: CURSEFORGE
+      CF_SERVER_MOD: /modpacks/Craft-to-Exile-2-Server-0.6.2.zip
+      OPS: "john123797"
+
+    volumes:
+      - ./modpacks:/modpacks:ro
+      - coe2_data:/data
+
+volumes:
+  coe2_data: {}
