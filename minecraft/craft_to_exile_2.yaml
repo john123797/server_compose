@@ -1,6 +1,6 @@
 services:
   coe2:
-    image: itzg/minecraft-server:2024.10.0
+    image: itzg/minecraft-server:2025.2.0
     tty: true
     stdin_open: true
 
